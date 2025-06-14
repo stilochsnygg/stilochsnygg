@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { pageLinks } from "../../main";
 import { useScrollTop } from "../../hooks/states";
 
+import logo from "../../assets/images/logo.jpg";
+
 type Props = {};
 
 const HomeNavBar: React.FC<Props> = ({ ...props }) => {
@@ -17,18 +19,19 @@ const HomeNavBar: React.FC<Props> = ({ ...props }) => {
 	}, [scroll]);
 	return (
 		<div className={mergeClasses(c.homeNavBar, scrollTop != 0 && "scrolled")}>
+			<Link
+				to={"/"}
+				className={c.logo}
+			>
+				<img src={logo} />
+			</Link>
 			{pageLinks.map((l) => {
 				return (
 					<Link
 						to={l.href}
 						key={l.href}
 					>
-						<Text
-							size={300}
-							weight="semibold"
-						>
-							{l.label}
-						</Text>
+						<Text weight="semibold">{l.label}</Text>
 					</Link>
 				);
 			})}

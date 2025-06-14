@@ -17,28 +17,25 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>((props, r
 				{...props}
 			>
 				<div className={mergeClasses(c.heroMain)}>
-					<Card className={c.heroCard}>
-						<Text size={500}>
-							<h1
-								style={{
-									lineHeight: "0px",
-									marginBottom: "8px",
-									textWrap: "nowrap",
-								}}
-							>
-								Sagas Stil & Syster Snygg AB
-							</h1>
-						</Text>
-						<Text
-							size={500}
-							weight="semibold"
-							style={{ fontFamily: "Edu VIC WA NT Hand" }}
-							italic
+					<Text>
+						<h1
+							style={{
+								lineHeight: "0px",
+								marginBottom: "0px",
+								textWrap: "nowrap",
+							}}
 						>
-							<span>Vetenskap - Kvalitet - Säkerhet</span>
-						</Text>
-						OBS webbsida under uppbyggnad
-					</Card>
+							Sagas Stil & Syster Snygg AB
+						</h1>
+					</Text>
+					<Text
+						weight="semibold"
+						style={{ fontFamily: "Edu VIC WA NT Hand" }}
+						italic
+					>
+						<span>Vetenskap - Kvalitet - Säkerhet</span>
+					</Text>
+					OBS webbsida under uppbyggnad
 					{props.children}
 				</div>
 			</div>

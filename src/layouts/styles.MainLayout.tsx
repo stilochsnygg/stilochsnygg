@@ -28,21 +28,4 @@ export const useClasses = makeStyles({
 			fontSize: "8px",
 		},
 	},
-	logo: {
-		"position": "fixed",
-		"top": "0",
-		"left": "0",
-		"zIndex": 2,
-		"transition": `filter ${tokens.durationNormal} ${tokens.curveDecelerateMid}`,
-		"overflow": "hidden",
-		"& img": {
-			width: "2.5em",
-			height: "auto",
-			borderRadius: "0 " + "0 " + tokens.borderRadiusLarge + "0",
-		},
-
-		":hover": {
-			filter: "brightness(50%)",
-		},
-	},
 });

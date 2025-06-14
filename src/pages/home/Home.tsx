@@ -11,6 +11,7 @@ import studioImg from "../../assets/images/studio.jpg";
 import injectionImg from "../../assets/images/injection2.jpg";
 import productsImg from "../../assets/images/products.jpg";
 import classroomImg from "../../assets/images/classroom.jpg";
+import treatmentImg from "../../assets/images/treatment.jpg";
 //textures
 import grainSvg from "../../assets/textures/grain.svg";
 //icons
@@ -83,14 +84,26 @@ const Home = (props: Props) => {
 						<CardHeader
 							header={
 								<Text
-									size={500}
 									style={{
 										display: "flex",
 										flexDirection: "column",
+										fontSize: tokens.fontSizeBase400,
+										whiteSpace: "nowrap",
 									}}
 								>
 									Akademi
-									<Text size={200}>För dig som vill bli expert.</Text>
+									<Text
+										style={{
+											fontSize: tokens.fontSizeBase200,
+											display: "-webkit-box",
+											WebkitLineClamp: 2,
+											WebkitBoxOrient: "vertical",
+											overflow: "hidden",
+											textOverflow: "ellipsis",
+										}}
+									>
+										För dig som vill bli expert.
+									</Text>
 								</Text>
 							}
 							action={
@@ -109,7 +122,7 @@ const Home = (props: Props) => {
 							<img
 								src={digitalCoursesImg}
 								alt=""
-								style={{ maxHeight: "25em" }}
+								style={{ maxWidth: "100%", height: "auto" }}
 							/>
 						</CardPreview>
 						<CardFooter>
@@ -123,14 +136,26 @@ const Home = (props: Props) => {
 						<CardHeader
 							header={
 								<Text
-									size={500}
 									style={{
 										display: "flex",
 										flexDirection: "column",
+										fontSize: tokens.fontSizeBase400,
+										whiteSpace: "nowrap",
 									}}
 								>
 									Boka Tjänster
-									<Text size={200}>Bokningar sker genom Boka Direkt</Text>
+									<Text
+										style={{
+											fontSize: tokens.fontSizeBase200,
+											display: "-webkit-box",
+											WebkitLineClamp: 2,
+											WebkitBoxOrient: "vertical",
+											overflow: "hidden",
+											textOverflow: "ellipsis",
+										}}
+									>
+										Bokningar sker genom Boka Direkt
+									</Text>
 								</Text>
 							}
 							action={
@@ -153,9 +178,9 @@ const Home = (props: Props) => {
 						/>
 						<CardPreview>
 							<img
-								src={injectionImg}
+								src={treatmentImg}
 								alt=""
-								style={{ maxHeight: "25em" }}
+								style={{ maxWidth: "100%", height: "auto" }}
 							/>
 						</CardPreview>
 						<CardFooter>
@@ -166,28 +191,6 @@ const Home = (props: Props) => {
 				</div>
 			</Section>
 			{/* <Section>other</Section> */}
-
-			{/* grainy texture */}
-			{/* <svg
-				viewBox="0 0 250 250"
-				xmlns="http://www.w3.org/2000/svg"
-				className={c.grainTexture}
-			>
-				<filter id="noiseFilter">
-					<feTurbulence
-						type="fractalNoise"
-						baseFrequency="0.65"
-						numOctaves="3"
-						stitchTiles="stitch"
-					/>
-				</filter>
-
-				<rect
-					width="100%"
-					height="100%"
-					filter="url(#noiseFilter)"
-				/>
-			</svg> */}
 		</div>
 	);
 };

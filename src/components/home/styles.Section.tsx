@@ -9,6 +9,7 @@ export const useClasses = makeStyles({
 		gap: tokens.spacingVerticalXXXL,
 		minWidth: "100svw",
 		minHeight: "100svh",
+
 		flex: 1,
 		zIndex: 1,
 		boxSizing: "border-box",

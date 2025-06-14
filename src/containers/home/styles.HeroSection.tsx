@@ -19,6 +19,7 @@ export const useClasses = makeStyles({
 		// animationIterationCount: "",
 		// animationDuration: "0s",
 		animationDuration: "2s",
+		// animationDuration: "10s",
 		animationFillMode: "forwards",
 		animationTimingFunction: "ease-out",
 		animationName: {

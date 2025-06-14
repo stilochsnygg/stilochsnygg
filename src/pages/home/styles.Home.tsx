@@ -17,8 +17,14 @@ export const useClasses = makeStyles({
 	},
 
 	cardSection: {
-		display: "flex",
-		gap: tokens.spacingHorizontalM,
+		"display": "flex",
+		"justifyContent": "flex-start",
+		"overflowX": "scroll",
+		"paddingLeft": "1rem",
+		"gap": tokens.spacingHorizontalM,
+		"@media screen and (max-width: 640px)": {
+			width: "100svw",
+		},
 	},
 
 	tabList: {},
@@ -26,8 +32,17 @@ export const useClasses = makeStyles({
 	footer: {},
 
 	card: {
-		maxWidth: "25em",
-		backgroundColor: tokens.colorNeutralCardBackground,
+		"position": "relative",
+		"maxWidth": "25svw",
+		"minHeight": "fit-content",
+		"backgroundColor": tokens.colorNeutralCardBackground,
+		"@media screen and (max-width: 1420px)": {
+			maxWidth: "20em",
+		},
+		"@media screen and (max-width: 640px)": {
+			maxHeight: "fit-content",
+			maxWidth: "55em",
+		},
 	},
 
 	grainTexture: {
@@ -38,9 +53,11 @@ export const useClasses = makeStyles({
 
 	// sections
 	services: {
+		paddingTop: tokens.spacingVerticalXL,
 		background: `url(https://grainy-gradients.vercel.app/noise.svg)`,
 		backgroundColor: tokens.colorBrandBackground2,
 		backgroundBlendMode: "multiply",
 		color: tokens.colorBrandForegroundInverted,
+		justifyContent: "flex-start",
 	},
 });

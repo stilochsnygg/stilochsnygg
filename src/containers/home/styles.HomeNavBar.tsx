@@ -6,10 +6,13 @@ export const useClasses = makeStyles({
 		"justifyContent": "center",
 		"alignItems": "center",
 		"alignSelf": "center",
-		"position": "fixed",
-		"width": "fit-content",
-		"height": "1em",
-		"padding": tokens.spacingVerticalM + tokens.spacingHorizontalXXXL,
+		"position": "sticky",
+		// "width": "fit-content",
+		"width": "100%",
+		"height": "1rem",
+		"top": 0,
+		"left": 0,
+		"padding": tokens.spacingVerticalM + " 0",
 		"zIndex": 2,
 		"gap": tokens.spacingHorizontalXXXL,
 
@@ -18,7 +21,7 @@ export const useClasses = makeStyles({
 		// "backgroundColor": "rgba(0,0,0,0.4)",
 		"color": tokens.colorNeutralForegroundInverted,
 		"backgroundColor": tokens.colorBrandBackground,
-		"borderRadius": "0 " + "0 " + "16px " + "16px ",
+		// "borderRadius": "0 " + "0 " + "16px " + "16px ",
 		"transition": `all ${tokens.durationGentle} ${tokens.curveAccelerateMid}`,
 
 		"& a": {
@@ -31,6 +34,23 @@ export const useClasses = makeStyles({
 		"&.scrolled": {
 			// backgroundColor: tokens.colorBrandBackground1,
 			// color: tokens.colorBrandForeground2,
+		},
+	},
+	logo: {
+		"position": "absolute",
+		"top": "0",
+		"left": "0",
+		"transition": `filter ${tokens.durationNormal} ${tokens.curveDecelerateMid}`,
+		"overflow": "hidden",
+		"height": "100%",
+		"& img": {
+			width: "auto",
+			height: "100%",
+			// borderRadius: "0 " + "0 " + tokens.borderRadiusLarge + "0",
+		},
+
+		":hover": {
+			filter: "brightness(50%)",
 		},
 	},
 });
