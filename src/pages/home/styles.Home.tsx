@@ -30,9 +30,17 @@ export const useClasses = makeStyles({
 		backgroundColor: tokens.colorNeutralCardBackground,
 	},
 
+	grainTexture: {
+		width: "250px",
+		height: "250px",
+		outline: `solid 6px black`,
+	},
+
 	// sections
 	services: {
+		background: `url(https://grainy-gradients.vercel.app/noise.svg)`,
 		backgroundColor: tokens.colorBrandBackground2,
+		backgroundBlendMode: "multiply",
 		color: tokens.colorBrandForegroundInverted,
 	},
 });

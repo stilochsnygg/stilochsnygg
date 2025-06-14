@@ -11,7 +11,11 @@ import studioImg from "../../assets/images/studio.jpg";
 import injectionImg from "../../assets/images/injection2.jpg";
 import productsImg from "../../assets/images/products.jpg";
 import classroomImg from "../../assets/images/classroom.jpg";
+//textures
+import grainSvg from "../../assets/textures/grain.svg";
+//icons
 import { ArrowRight12Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -53,36 +57,139 @@ const Home = (props: Props) => {
 			<HeroSection ref={heroSectionRef} />
 			{/* Our Services */}
 			<Section className={c.services}>
-				<h2>Webbsida under uppbyggnad</h2>
-				<Card className={c.card}>
-					<CardHeader
-						header={<Text size={500}>Kurser</Text>}
-						action={<Button icon={<ArrowRight12Regular />}>Till Zenler</Button>}
-					/>
-					<CardPreview>
-						<img
-							src={digitalCoursesImg}
-							alt=""
-							style={{ maxHeight: "40svh" }}
+				<h2 style={{ opacity: "0.5", position: "absolute", left: "0", bottom: "0" }}>OBS. Webbsida under uppbyggnad</h2>
+				<Text
+					size={600}
+					weight="semibold"
+					style={{
+						color: tokens.colorBrandForeground1,
+						textAlign: "center",
+					}}
+				>
+					Saga Stil & Syster Snygg AB
+					<br />
+					<Text
+						size={300}
+						weight="regular"
+						style={{
+							color: tokens.colorNeutralForeground2,
+						}}
+					>
+						Vi är en kombinerad klinik, akademi och studio där kvalitet möter kreativitet.
+					</Text>
+				</Text>
+				<div className={c.cardSection}>
+					<Card className={c.card}>
+						<CardHeader
+							header={
+								<Text
+									size={500}
+									style={{
+										display: "flex",
+										flexDirection: "column",
+									}}
+								>
+									Akademi
+									<Text size={200}>För dig som vill bli expert.</Text>
+								</Text>
+							}
+							action={
+								<Button
+									icon={<ArrowRight12Regular />}
+									appearance="subtle"
+									style={{
+										borderColor: tokens.colorPaletteMarigoldBorder2,
+									}}
+								>
+									Till Zenler
+								</Button>
+							}
 						/>
-					</CardPreview>
-					Få certifiering online genom vår Zenler-plattform. Interaktiva videolektioner, quiz och digitala material. Perfekt för dig som vill lära i
-					egen takt.
-				</Card>
+						<CardPreview>
+							<img
+								src={digitalCoursesImg}
+								alt=""
+								style={{ maxHeight: "25em" }}
+							/>
+						</CardPreview>
+						<CardFooter>
+							Just nu utbildar vi dig i 'personal' styling och fashion stylist.
+							<br />
+							Få certifiering online genom vår Zenler-plattform. Interaktiva videolektioner, quiz och digitala material. Perfekt för dig som vill
+							lära i egen takt.
+						</CardFooter>
+					</Card>
+					<Card className={c.card}>
+						<CardHeader
+							header={
+								<Text
+									size={500}
+									style={{
+										display: "flex",
+										flexDirection: "column",
+									}}
+								>
+									Boka Tjänster
+									<Text size={200}>Bokningar sker genom Boka Direkt</Text>
+								</Text>
+							}
+							action={
+								<Button
+									icon={<ArrowRight12Regular />}
+									appearance="subtle"
+									style={{
+										borderColor: tokens.colorPaletteMarigoldBorder2,
+									}}
+								>
+									<Link
+										to={"https://www.bokadirekt.se/places/sagas-stil-syster-snygg-ab-58275"}
+										referrerPolicy="no-referrer"
+										target="_blank"
+									>
+										Boka Direkt
+									</Link>
+								</Button>
+							}
+						/>
+						<CardPreview>
+							<img
+								src={injectionImg}
+								alt=""
+								style={{ maxHeight: "25em" }}
+							/>
+						</CardPreview>
+						<CardFooter>
+							Upptäck föreläsningar, workshops, färg- & stilanalyser samt injektions-, microneedling- och LED-behandlingar – boka din plats och ta
+							del av exklusiva erbjudanden!
+						</CardFooter>
+					</Card>
+				</div>
 			</Section>
 			{/* <Section>other</Section> */}
+
+			{/* grainy texture */}
+			{/* <svg
+				viewBox="0 0 250 250"
+				xmlns="http://www.w3.org/2000/svg"
+				className={c.grainTexture}
+			>
+				<filter id="noiseFilter">
+					<feTurbulence
+						type="fractalNoise"
+						baseFrequency="0.65"
+						numOctaves="3"
+						stitchTiles="stitch"
+					/>
+				</filter>
+
+				<rect
+					width="100%"
+					height="100%"
+					filter="url(#noiseFilter)"
+				/>
+			</svg> */}
 		</div>
 	);
 };
 
 export default Home;
-
-{
-	/* <Text
-	size={800}
-	weight="bold"
-	style={{}}
->
-	<h2>Akademi</h2>
-</Text> */
-}

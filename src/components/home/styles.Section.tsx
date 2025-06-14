@@ -11,6 +11,7 @@ export const useClasses = makeStyles({
 		minHeight: "100svh",
 		flex: 1,
 		zIndex: 1,
+		boxSizing: "border-box",
 		// backdropFilter: "blur(16px) brightness(100%)",
 		// background: `linear-gradient(
 		// 	to bottom,

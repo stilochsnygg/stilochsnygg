@@ -15,8 +15,9 @@ export const useClasses = makeStyles({
 
 		"boxShadow": tokens.shadow4,
 		"backdropFilter": "blur(4px)",
+		// "backgroundColor": "rgba(0,0,0,0.4)",
 		"color": tokens.colorNeutralForegroundInverted,
-		"backgroundColor": "rgba(0,0,0,0.4)",
+		"backgroundColor": tokens.colorBrandBackground,
 		"borderRadius": "0 " + "0 " + "16px " + "16px ",
 		"transition": `all ${tokens.durationGentle} ${tokens.curveAccelerateMid}`,
 
@@ -28,8 +29,8 @@ export const useClasses = makeStyles({
 		},
 
 		"&.scrolled": {
-			backgroundColor: tokens.colorBrandBackground2,
-			color: tokens.colorBrandForeground2,
+			// backgroundColor: tokens.colorBrandBackground1,
+			// color: tokens.colorBrandForeground2,
 		},
 	},
 });

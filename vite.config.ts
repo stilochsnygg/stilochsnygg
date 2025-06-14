@@ -8,4 +8,8 @@ export default defineConfig({
 		outDir: "./docs",
 		emptyOutDir: true,
 	},
+	server: {
+		host: "stillochsnygg.com",
+		port: 443,
+	},
 });
