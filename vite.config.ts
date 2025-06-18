@@ -9,7 +9,7 @@ export default defineConfig({
 		emptyOutDir: true,
 	},
 	server: {
-		host: "stillochsnygg.com",
+		host: "stillochsnygg.se",
 		port: 443,
 	},
 });

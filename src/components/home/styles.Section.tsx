@@ -8,9 +8,9 @@ export const useClasses = makeStyles({
 		alignItems: "center",
 		gap: tokens.spacingVerticalXXXL,
 		minWidth: "100svw",
-		minHeight: "100svh",
+		minHeight: "calc(100svh - 1rem)",
+		padding: tokens.spacingVerticalL + tokens.spacingHorizontalL,
 
-		flex: 1,
 		zIndex: 1,
 		boxSizing: "border-box",
 		// backdropFilter: "blur(16px) brightness(100%)",
@@ -22,7 +22,7 @@ export const useClasses = makeStyles({
 		// 	rgba(0, 0, 0, 0.2) 100%
 		// 	)
 		// 	`,
-		borderBottom: `solid ${tokens.strokeWidthThickest} ${tokens.colorPaletteMarigoldBorder1}`,
+		// borderBottom: `solid ${tokens.strokeWidthThickest} ${tokens.colorPaletteMarigoldBorder1}`,
 		color: tokens.colorBrandBackgroundInverted,
 	},
 });

@@ -17,6 +17,7 @@ import grainSvg from "../../assets/textures/grain.svg";
 //icons
 import { ArrowRight12Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
+import ServicesCarousel from "../../containers/home/services-carousel/ServicesCarousel";
 
 type Props = {};
 
@@ -190,7 +191,11 @@ const Home = (props: Props) => {
 					</Card>
 				</div>
 			</Section>
-			{/* <Section>other</Section> */}
+
+			{/* carousel */}
+			<Section>
+				<ServicesCarousel />
+			</Section>
 		</div>
 	);
 };

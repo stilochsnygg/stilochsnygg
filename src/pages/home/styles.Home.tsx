@@ -8,20 +8,13 @@ export const useClasses = makeStyles({
 		overflowY: "scroll",
 	},
 
-	section: {
-		flexDirection: "row",
-		padding: `${tokens.spacingVerticalXXXL} ${tokens.spacingHorizontalXXXL}`,
-		justifyContent: "center",
-		alignItems: "flex-start",
-		// boxSizing: "border-box",
-	},
-
 	cardSection: {
 		"display": "flex",
 		"justifyContent": "flex-start",
 		"overflowX": "scroll",
 		"paddingLeft": "1rem",
 		"gap": tokens.spacingHorizontalM,
+
 		"@media screen and (max-width: 640px)": {
 			width: "100svw",
 		},
@@ -36,6 +29,7 @@ export const useClasses = makeStyles({
 		"maxWidth": "25svw",
 		"minHeight": "fit-content",
 		"backgroundColor": tokens.colorNeutralCardBackground,
+
 		"@media screen and (max-width: 1420px)": {
 			maxWidth: "20em",
 		},
@@ -53,11 +47,11 @@ export const useClasses = makeStyles({
 
 	// sections
 	services: {
-		paddingTop: tokens.spacingVerticalXL,
 		background: `url(https://grainy-gradients.vercel.app/noise.svg)`,
 		backgroundColor: tokens.colorBrandBackground2,
 		backgroundBlendMode: "multiply",
 		color: tokens.colorBrandForegroundInverted,
 		justifyContent: "flex-start",
+		height: "fit-content",
 	},
 });

@@ -10,6 +10,7 @@ export const useClasses = makeStyles({
 		// "width": "fit-content",
 		"width": "100%",
 		"height": "1rem",
+		"maxHeight": "1rem",
 		"top": 0,
 		"left": 0,
 		"padding": tokens.spacingVerticalM + " 0",
@@ -19,8 +20,8 @@ export const useClasses = makeStyles({
 		"boxShadow": tokens.shadow4,
 		"backdropFilter": "blur(4px)",
 		// "backgroundColor": "rgba(0,0,0,0.4)",
-		"color": tokens.colorNeutralForegroundInverted,
-		"backgroundColor": tokens.colorBrandBackground,
+		"color": tokens.colorNeutralForeground1,
+		"backgroundColor": tokens.colorNeutralBackground1,
 		// "borderRadius": "0 " + "0 " + "16px " + "16px ",
 		"transition": `all ${tokens.durationGentle} ${tokens.curveAccelerateMid}`,
 
